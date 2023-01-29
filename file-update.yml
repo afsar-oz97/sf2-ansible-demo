@@ -3,7 +3,8 @@
   tasks:
     - name: copy file from main to remote hosts
       copy:
-        src: /home/sensen/demo_file
+        content: demo line 1 from content
+        #src: /home/sensen/demo_file
         dest: /home/sensen/demo_file
       debug:
         msg: "file copied"
