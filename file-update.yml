@@ -4,7 +4,7 @@
     - name: copy file from main to remote hosts
       copy:
         #content: "demo line 1 from content\n"
-        src: /home/sensen/dfile
+        src: dfile
         dest: /home/sensen/demo_file
       #debug:
        # msg: "file copied"
