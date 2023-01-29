@@ -6,5 +6,5 @@
         content: demo line 1 from content
         #src: /home/sensen/demo_file
         dest: /home/sensen/demo_file
-      debug:
-        msg: "file copied"
+      #debug:
+       # msg: "file copied"
