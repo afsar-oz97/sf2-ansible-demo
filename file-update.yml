@@ -6,5 +6,6 @@
         #content: "demo line 1 from content\n"
         src: /home/sensen/dfile
         dest: /home/sensen/demo_file
+      delegate_to: local_host
       #debug:
        # msg: "file copied"
