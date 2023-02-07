@@ -14,4 +14,4 @@
       
     - name: Print where the file is copied
       debug:
-        msg: "file copied"
+        msg: "The absolute path of the file is {{result.dest}}."
