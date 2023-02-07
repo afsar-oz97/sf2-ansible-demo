@@ -1,4 +1,5 @@
-hosts: seneyed-vpu-0101
+- name: present directory
+  hosts: seneyed-vpu-0101
   tasks:
     - name: Print the present directory
       shell: pwd
