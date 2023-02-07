@@ -1,9 +1,9 @@
 - name: file check
-  hosts: local-host
+  hosts: seneyed-vpu-0101
   tasks:
     - name: Ensure the file is present
       stat:
-        path: /root/dfile
+        path: ./dfile
       register: file_check
     - name: Tell whether the file exists
       debug:
