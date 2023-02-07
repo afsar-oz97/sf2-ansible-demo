@@ -1,0 +1,8 @@
+hosts: seneyed-vpu-0101
+  tasks:
+    - name: Print the present directory
+      shell: pwd
+      register: present_directory
+    - name: Print the result
+      debug:
+        msg: "The present directory is {{ present_directory.stdout }}
