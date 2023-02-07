@@ -5,7 +5,7 @@
       copy:
         #content: "demo line 1 from content\n"
         remote_src: yes
-        src: /home/sensen/dfile.txt
+        src: /home/sensen/afsar/dfile.txt
         dest: /home/sensen/afsar/dfile.txt
         #owner: root 
         #group: root 
