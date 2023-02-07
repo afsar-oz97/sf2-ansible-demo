@@ -3,12 +3,7 @@
   tasks:
     - name: Ensure the file is present
       stat:
-        #content: "demo line 1 from content\n"
         path: /root/dfile
-        #src: /root/dfile
-        #dest: /home/sensen/demo_file
-      #when:
-       # - inventory_hostname == "sengame-vpu-0101" or inventory_hostname = "sengame-vpu-0101"
       register: file_check
       debug:
         msg: "The file {{ file_check.stat.exists }}"
