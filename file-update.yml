@@ -10,5 +10,8 @@
       #when:
        # - inventory_hostname == "sengame-vpu-0101" or inventory_hostname = "sengame-vpu-0101"
       delegate_to: local-host
-      #debug:
-       # msg: "file copied"
+      register: result
+      
+    - name: Print where the file is copied
+      debug:
+        msg: "file copied"
