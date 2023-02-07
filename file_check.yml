@@ -2,7 +2,7 @@
   hosts: local-host
   tasks:
     - name: Ensure the file is present
-      start:
+      stat:
         #content: "demo line 1 from content\n"
         path: /root/dfile
         #src: /root/dfile
