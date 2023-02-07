@@ -6,7 +6,7 @@
         #content: "demo line 1 from content\n"
         remote_src: yes
         src: /home/sensen/dfile
-        dest: /home/sensen/dfile
+        dest: /home/sensen/afsar
         #owner: root 
         #group: root 
         #mode: 644
