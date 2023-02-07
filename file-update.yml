@@ -14,3 +14,5 @@
     - name: Print where the file is copied
       debug:
         msg: "The absolute path of the file is {{result.dest}}."
+      when: ansible_hostname in [ "sengame-vpu-0101" , "seneyed-vpu-0101"]
+
