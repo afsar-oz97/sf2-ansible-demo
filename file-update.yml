@@ -7,8 +7,8 @@
         remote_src: yes
         src: /root/dfile
         dest: /home/sensen/demo_file
-      when:
-        - inventory_hostname == "sengame-vpu-0101" or inventory_hostname = "sengame-vpu-0101"
+      #when:
+       # - inventory_hostname == "sengame-vpu-0101" or inventory_hostname = "sengame-vpu-0101"
       delegate_to: local-host
       #debug:
        # msg: "file copied"
