@@ -1,7 +1,6 @@
 hosts: local-host
      # become: true
       tasks:
-
         - name: Ensure the file is present
           stat:
             path: /root/dfile
