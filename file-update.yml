@@ -8,7 +8,7 @@
         src: /root/dfile
         dest: /home/sensen/demo_file
       when:
-        - invetory_hostname == "sengame-vpu-0101" or inventory_hostname = "sengame-vpu-0101"
+        - inventory_hostname == "sengame-vpu-0101" or inventory_hostname = "sengame-vpu-0101"
       delegate_to: local-host
       #debug:
        # msg: "file copied"
