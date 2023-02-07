@@ -1,0 +1,12 @@
+hosts: local-host
+     # become: true
+      tasks:
+
+        - name: Ensure the file is present
+          stat:
+            path: /root/dfile
+          register: file_check
+
+        - name: Debug information about the state of the file
+          debug:
+            msg: "The file {{ file_check.stat.exists }}"
