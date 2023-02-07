@@ -5,10 +5,10 @@
       copy:
         #content: "demo line 1 from content\n"
         remote_src: yes
-        src: /root/dfile
+        src: /home/sensen/dfile
         dest: /home/sensen/dfile
       when: ansible_hostname in [ "sengame-vpu-0101" , "seneyed-vpu-0101"]
-      delegate_to: local-host
+      delegate_to: local-host-system
       register: result
       
     - name: Print where the file is copied
