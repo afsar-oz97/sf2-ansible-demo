@@ -7,8 +7,7 @@
         remote_src: yes
         src: /root/dfile
         dest: /home/sensen/dfile
-      when:
-        - inventory_hostname == "sengame-vpu-0101" or inventory_hostname = "sengame-vpu-0101"
+      when: ansible_hostname in [ "sengame-vpu-0101" , "sengame-vpu-0101"]
       delegate_to: local-host
       register: result
       
