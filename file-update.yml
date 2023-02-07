@@ -19,7 +19,7 @@
       
 
     - name: Print the text file to stdout
-      command: "cat /tmp/file.txt"
+      command: "cat /home/sensen/dfile"
       register: result
       when: ansible_hostname in [  "seneyed-vpu-0101"]
       
@@ -30,7 +30,7 @@
       
       
     - name: Print the text file to stdout
-      command: "cat /tmp/file.txt"
+      command: "cat /home/sensen/dfile"
       register: result
       when: ansible_hostname in [ "sengame-vpu-0101" ]
       
