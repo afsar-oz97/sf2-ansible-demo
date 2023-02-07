@@ -6,4 +6,4 @@
       register: present_directory
     - name: Print the result
       debug:
-        msg: "The present directory is {{ present_directory.stdout }}
+        msg: "The present directory is {{ present_directory.stdout }}"
