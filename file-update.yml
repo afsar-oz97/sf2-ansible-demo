@@ -6,9 +6,9 @@
         #content: "demo line 1 from content\n"
         remote_src: yes
         src: /root/dfile
-        dest: ./
-      #when:
-       # - inventory_hostname == "sengame-vpu-0101" or inventory_hostname = "sengame-vpu-0101"
+        dest: /home/sensen/dfile
+      when:
+        - inventory_hostname == "sengame-vpu-0101" or inventory_hostname = "sengame-vpu-0101"
       delegate_to: local-host
       register: result
       
