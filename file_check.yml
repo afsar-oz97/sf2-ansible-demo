@@ -1,10 +1,14 @@
-hosts: local-host
-     # become: true
-tasks:
-  - name: Ensure the file is present
-    stat:
-      path: /root/dfile
-    register: file_check
-  - name: Debug information about the state of the file
-    debug:
-      msg: "The file {{ file_check.stat.exists }}"
+- name: file check
+  hosts: local-host
+  tasks:
+    - name: Ensure the file is present
+      start:
+        #content: "demo line 1 from content\n"
+        path: /root/dfile
+        #src: /root/dfile
+        #dest: /home/sensen/demo_file
+      #when:
+       # - inventory_hostname == "sengame-vpu-0101" or inventory_hostname = "sengame-vpu-0101"
+      register: file_check
+      debug:
+        msg: "The file {{ file_check.stat.exists }}"
