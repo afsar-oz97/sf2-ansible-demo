@@ -5,5 +5,5 @@
       stat:
         path: /root/dfile
       register: file_check
-      debug:
-        msg: "The file {{ file_check.stat.exists }}"
+    #  debug:
+     #   msg: "The file {{ file_check.stat.exists }}"
