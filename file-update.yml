@@ -11,8 +11,8 @@
         #group: root 
         #mode: 644
         
-      when: ansible_hostname in [ "sengame-vpu-0101" , "seneyed-vpu-0101"]
-      delegate_to: local-host-system
+      #when: ansible_hostname in [ "sengame-vpu-0101" , "seneyed-vpu-0101"]
+      delegate_to: sengame-vpu-0101 , seneyed-vpu-0101
       register: result
       
     - name: Print where the file is copied
