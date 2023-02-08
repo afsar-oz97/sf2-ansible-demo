@@ -35,7 +35,7 @@
         src: /home/sensen/dfile.txt
         dest: /home/sensen/test/dfile.txt
         mode: pull
-      delegate_to: sengame-vpu0-0101
+      delegate_to: sengame-vpu-0101
       register: syncfile
       #run_once: true
 
