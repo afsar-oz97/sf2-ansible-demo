@@ -1,5 +1,5 @@
 - name: file update
-  hosts: local-host-system #sengame-vpu-0101, sengame-vpu-0101
+ # hosts: local-host-system #sengame-vpu-0101, sengame-vpu-0101
   #tasks:
    # - name: copy file from main to sengame-vpu-0101
       
@@ -30,12 +30,17 @@
   tasks:
     - name: Fetch the file from the laptop to master
       run_once: yes
-      fetch: src=/home/sensen/dfile.txt dest=buffer/ flat=yes
-      when: "{{ inventory_hostname == 'local-host-system' }}"
+      fetch: 
+        src: /home/sensen/dfile.txt 
+        dest: buffer/ 
+        flat: yes
+      when:  inventory_hostname in ['local-host-system']
 
     - name: Copy the file from master to sengame-vpu-0101
-      copy: src=buffer/dfiles.txt dest=/tmp/
-      when: "{{ inventory_hostname == 'sengame-vpu-101' }}"
+      copy: 
+        src: buffer/dfiles.txt 
+        dest: /tmp/
+      when: inventory_hostname in ['sengame-vpu-0101']
   
   
   
