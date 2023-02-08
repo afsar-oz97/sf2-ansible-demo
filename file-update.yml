@@ -1,5 +1,5 @@
 - name: file update
-  hosts: all #sengame-vpu-0101, sengame-vpu-0101
+  hosts: local-host-system #sengame-vpu-0101, sengame-vpu-0101
   tasks:
     - name: copy file from main to sengame-vpu-0101
       copy:
