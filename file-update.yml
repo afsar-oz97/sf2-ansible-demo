@@ -1,44 +1,38 @@
 - name: file update
   hosts: all #sengame-vpu-0101, sengame-vpu-0101
   tasks:
-    - name: copy file from main to remote hosts
+    - name: copy file from main to sengame-vpu-0101
       copy:
         #content: "demo line 1 from content\n"
         remote_src: yes
-        src: /home/sensen/dfile.txt
-        dest: /home/sensen/afsar/dfile.txt
+        src: local-host-system:/home/sensen/dfile.txt
+        dest: sengame-vpu-0101:/home/sensen/dfile.txt
         #owner: root 
         #group: root 
         #mode: 644
-        
-      #when: ansible_hostname in [ "sengame-vpu-0101" , "seneyed-vpu-0101"]
-      delegate_to: sengame-vpu-0101 , seneyed-vpu-0101
+      #when: ansible_hostname in [ "sengame-vpu-0101" , ""]
+      #delegate_to: sengame-vpu-0101 , seneyed-vpu-0101
       register: result
       
     - name: Print where the file is copied
       debug:
         msg: "The absolute path of the file is {{result.dest}}."
-      when: ansible_hostname in [ "sengame-vpu-0101" , "seneyed-vpu-0101"]
+      when: ansible_hostname in [ "sengame-vpu-0101" ]
       
+  
+  
+  
+  
+    - name: copy file from main to seneyed-vpu-0101
+      copy:
+        remote_src: yes
+        src: local-host-system:/home/sensen/dfile.txt
+        dest: seneyed-vpu-0101:/home/sensen/dfile.txt
+      register: result
+      
+    - name: Print where the file is copied
+      debug:
+        msg: "The absolute path of the file is {{result.dest}}."
+      when: ansible_hostname in [  "seneyed-vpu-0101"]
       
 
-  #  - name: Print the text file to stdout
-   #   command: "cat /home/sensen/dfile"
-    #  register: result
-  #    when: ansible_hostname in [  "seneyed-vpu-0101"]
-      
-   # - name: Print 
-    #  debug:
-     #   msg: "{{result.stdout}}."
-     # when: ansible_hostname in [  "seneyed-vpu-0101"]
-      
-      
-    #- name: Print the text file to stdout
-    #  command: "cat /home/sensen/dfile"
-    #  register: result
-    #  when: ansible_hostname in [ "sengame-vpu-0101" ]
-      
-   # - name: Print 
-    #  debug:
-     #   msg: "{{result.stdout}}."
-     # when: ansible_hostname in [ "sengame-vpu-0101" ]
