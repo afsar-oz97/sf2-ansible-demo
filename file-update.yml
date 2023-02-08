@@ -6,8 +6,8 @@
       copy:
         #content: "demo line 1 from content\n"
         remote_src: yes
-        src: /root/dfile
-        dest: sengame-vpu-0101:/root/dfiles
+        src: /home/sensen/dfile
+        dest: sengame-vpu-0101:/home/sensen/dfiless
         #owner: root 
         #group: root 
         #mode: 644
