@@ -26,16 +26,16 @@
   
   
   
-  hosts: local-host-system
+  hosts: sengame-vpu-0101 #local-host-system
  # user: wlsusr
   tasks:   
     - name: Copy the file from laptop to sengame
-      tags: sync-pull
+      #tags: sync-pull
       synchronize:
         src: /home/sensen/dfile.txt
         dest: /home/sensen/test/dfile.txt
-        mode: pull
-      delegate_to: sengame-vpu-0101
+        #mode: pull  
+      delegate_to: local-host-system #sengame-vpu-0101
       register: syncfile
       #run_once: true
 
