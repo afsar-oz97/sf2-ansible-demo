@@ -1,12 +1,12 @@
 - name: file update
-  hosts: local-host-system #sengame-vpu-0101, sengame-vpu-0101
+  hosts: all #local-host-system #sengame-vpu-0101, sengame-vpu-0101
   tasks:
     - name: copy file from main to sengame-vpu-0101
       copy:
         #content: "demo line 1 from content\n"
         remote_src: yes
         src: /home/sensen/dfile.txt
-        dest: sengame-vpu-0101:/home/sensen/file.txt
+        dest: /home/sensen/file.txt
         #owner: root 
         #group: root 
         #mode: 644
