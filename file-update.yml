@@ -26,23 +26,19 @@
   
   
   
-  hosts: all
-  tasks:
-    - name: Fetch the file from the laptop to master
-      run_once: yes
-      fetch: 
-        src: /home/sensen/dfile.txt 
-        dest: buffer/ 
-        flat: yes
-      when:  inventory_hostname in ['local-host-system']
+  hosts: local-host-system
+ # user: wlsusr
+  tasks:   
+    - name: Copy the file from laptop to sengame
+      tags: sync-pull
+      synchronize:
+        src: /home/sensen/dfile.txt
+        dest: /home/sensen/test/dfile.txt
+        mode: pull
+      delegate_to: sengame-vpu0-0101
+      register: syncfile
+      run_once: true
 
-    - name: Copy the file from master to sengame-vpu-0101
-      copy: 
-        src: buffer/dfiles.txt 
-        dest: /tmp/
-      when: inventory_hostname in ['sengame-vpu-0101']
-  
-  
   
   
   
