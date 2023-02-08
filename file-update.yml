@@ -1,12 +1,13 @@
 - name: file update
-  hosts: localhost #local-host-system #sengame-vpu-0101, sengame-vpu-0101
+  hosts: local-host-system #sengame-vpu-0101, sengame-vpu-0101
+  connection: ssh
   tasks:
     - name: copy file from main to sengame-vpu-0101
       copy:
         #content: "demo line 1 from content\n"
         remote_src: yes
         src: /root/dfile
-        dest: /root/dfiles
+        dest: sengame-vpu-0101:/root/dfiles
         #owner: root 
         #group: root 
         #mode: 644
