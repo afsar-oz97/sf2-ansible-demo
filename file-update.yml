@@ -27,14 +27,14 @@
   
   
   hosts: sengame-vpu-0101 #local-host-system
-  user: sensen
+  #user: sensen
   tasks:   
     - name: Copy the file from laptop to sengame
       #tags: sync-pull
       synchronize:
         src: /home/sensen/dfile.txt
         dest: /home/sensen/test/dfile.txt
-        group: sensen
+        #group: sensen
         #mode: pull  
       delegate_to: local-host-system #sengame-vpu-0101
       register: syncfile
