@@ -1,17 +1,17 @@
 - name: file update
-  hosts: all #local-host-system #sengame-vpu-0101, sengame-vpu-0101
+  hosts: localhost #local-host-system #sengame-vpu-0101, sengame-vpu-0101
   tasks:
     - name: copy file from main to sengame-vpu-0101
       copy:
         #content: "demo line 1 from content\n"
-        remote_src: yes
-        src: /home/sensen/dfile.txt
-        dest: /home/sensen/file.txt
+        #remote_src: yes
+        src: /root/dfile
+        dest: /root/dfiles
         #owner: root 
         #group: root 
         #mode: 644
       #when: ansible_hostname in [ "sengame-vpu-0101" , ""]
-      delegate_to: local-host-system
+     # delegate_to: local-host-system
       register: result
       
     - name: Print where the file is copied
