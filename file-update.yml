@@ -34,7 +34,7 @@
       synchronize:
         src: /home/sensen/dfile.txt
         dest: /home/sensen/test/dfile.txt
-        rsync_path: 'sudo -u sensen rsync'
+        rsync_path: '/usr/bin/rsync'
         #group: sensen
         #mode: pull  
       delegate_to: local-host-system #sengame-vpu-0101
