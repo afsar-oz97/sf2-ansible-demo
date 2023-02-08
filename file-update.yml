@@ -6,7 +6,7 @@
         #content: "demo line 1 from content\n"
         remote_src: yes
         src: local-host-system:/home/sensen/dfile.txt
-        dest: sengame-vpu-0101:/home/sensen/dfile.txt
+        dest: sengame-vpu-0101:/home/sensen/test/dfile.txt
         #owner: root 
         #group: root 
         #mode: 644
@@ -27,7 +27,7 @@
       copy:
         remote_src: yes
         src: local-host-system:/home/sensen/dfile.txt
-        dest: seneyed-vpu-0101:/home/sensen/dfile.txt
+        dest: seneyed-vpu-0101:/home/sensen/test/dfile.txt
       register: result
       
     - name: Print where the file is copied
