@@ -37,7 +37,7 @@
         mode: pull
       delegate_to: sengame-vpu0-0101
       register: syncfile
-      run_once: true
+      #run_once: true
 
   
   
