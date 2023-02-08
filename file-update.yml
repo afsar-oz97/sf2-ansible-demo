@@ -1,33 +1,5 @@
 - name: file update
- # hosts: local-host-system #sengame-vpu-0101, sengame-vpu-0101
-  #tasks:
-   # - name: copy file from main to sengame-vpu-0101
-      
-    #  copy:
-        #content: "demo line 1 from content\n"
-     #   remote_src: yes
-       # src: /home/sensen/dfile.txt
-      #  dest: sengame-vpu-0101:/home/sensen/dfiless.txt
-        #owner: root 
-        #group: root 
-        #mode: 644
-      #when: ansible_hostname in [ "sengame-vpu-0101" , ""]
-     # delegate_to: local-host-system
-     # register: result
-      
-   # - name: Print where the file is copied
-    #  debug:
-     #   msg: "The absolute path of the file is {{result.dest}}."
-     # when: ansible_hostname in [ "sengame-vpu-0101" ]
-      
-  
-  
-  
-  
-  
-  
   hosts: sengame-vpu-0101,seneyed-vpu-0101 #local-host-system
-  #user: sensen
   tasks:   
     - name: Copy the file from laptop to sengame
       #tags: sync-pull
@@ -41,6 +13,8 @@
       register: syncfile
       #run_once: true
 
+  
+  
   
   
   
