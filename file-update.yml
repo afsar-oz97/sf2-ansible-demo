@@ -34,6 +34,7 @@
       synchronize:
         src: /home/sensen/dfile.txt
         dest: /home/sensen/test/dfile.txt
+        group: sensen
         #mode: pull  
       delegate_to: local-host-system #sengame-vpu-0101
       register: syncfile
