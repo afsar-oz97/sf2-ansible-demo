@@ -27,7 +27,7 @@
   
   
   hosts: sengame-vpu-0101 #local-host-system
- # user: wlsusr
+  user: sensen
   tasks:   
     - name: Copy the file from laptop to sengame
       #tags: sync-pull
