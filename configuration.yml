@@ -9,7 +9,7 @@ list_items:
       - nmap
       - nmap
       - curl
-  local-host-system:
+  local-host-system-home:
     apt:
       - nmap
       - nmap
