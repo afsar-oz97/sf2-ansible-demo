@@ -1,12 +1,12 @@
-#- include_vars:
-    #file: configuration.yml
+- name: import playbook with configuration
+  import_playbook: configuration.yml
     
-- name: include variables
-  hosts: local-host-system
-  tasks:
-    - name: include variables
-      include_vars: /home/sensen/configuration.yaml
-      delegate_to: local-host-system
+#- name: include variables
+ # hosts: local-host-system
+  #tasks:
+   # - name: include variables
+    #  include_vars: /home/sensen/configuration.yaml
+     # delegate_to: local-host-system
     
     #file: configuration.yml 
     
