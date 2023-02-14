@@ -1,4 +1,4 @@
-#- import_playbook: configuration.yml
+- import_playbook: configuration.yml
   
 - name: print the content
   hosts: all
