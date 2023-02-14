@@ -1,4 +1,4 @@
-- import_playbook: configuration.yml
+- include: configuration.yml
   
 - hosts: all
   tasks:
