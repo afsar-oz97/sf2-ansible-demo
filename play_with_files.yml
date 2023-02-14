@@ -1,5 +1,5 @@
 - name: import playbook with configuration
-  include_vars: configuration.yml
+  import_playbook: configuration.yml
     
 #- name: include variables
  # hosts: local-host-system
