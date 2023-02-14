@@ -2,7 +2,7 @@
     #file: configuration.yml
     
 - name: include variables
-  hosts: local-host-system
+  #hosts: local-host-system
   tasks:
     - include_vars: configuration.yaml
     
