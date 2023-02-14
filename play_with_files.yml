@@ -2,9 +2,9 @@
     #file: configuration.yml
     
 - name: include variables
-  hosts: "*"
+  hosts: local-host-system
   tasks:
-    - include_vars: configuration.yaml
+    - include_vars: /home/sensen/configuration.yaml
     
     #file: configuration.yml 
     
