@@ -1,0 +1,21 @@
+- name: install
+  hosts: sengame-vpu-0101 ,seneyed-vpu-0101 #local-host-system
+  become: true
+  tasks:   
+    - name: sudo apt update and install app to the hosts
+      apt:
+        name: nmap
+        #state: present (default)
+        update_cache: yes
+      register: install
+      
+    - name: Gather Package facts
+      package_facts:
+        manager: auto
+ 
+    - name: Validating if the package is installed or not
+      debug: 
+        msg: "{{item}} is installed"
+      when: '"{{item}}" in ansible_facts.packages'
+      with_items:
+        - nmap
