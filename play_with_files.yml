@@ -1,7 +1,5 @@
-- name: import playbook with configuration
-  include_playbook: configuration.yml
+- include_playbook: configuration.yml
   
-
 - name: print the content
   hosts: all
   tasks:
