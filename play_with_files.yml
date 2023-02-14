@@ -1,9 +1,6 @@
 #- import_playbook: configuration.yml
   
 - name: print the content
-  include_vars:
-    file: "configuration.yml"
-    name: list_items
   hosts: all
   tasks:
   - name: Ansible Dictionaries Usage Example
