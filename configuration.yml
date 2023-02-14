@@ -7,11 +7,16 @@ list_items:
   sengame-vpu-0101:
     apt:
       - nmap
-      - nmap
+      - wget
       - curl
   local-host-system-home:
     apt:
       - nmap
+      - wget
+      - curl
+  local-host-docker:
+    apt:
       - nmap
+      - wget
       - curl
 
