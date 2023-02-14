@@ -1,7 +1,9 @@
 
-- name: create variables
-  hosts: all
-  vars:
+#- name: create variables
+ # hosts: all
+  #vars:
+  
+- set_fact:
     list_items:
       seneyed-vpu-0101:
         apt:
@@ -13,11 +15,11 @@
           - nmap
           - nmap
           - curl
-          
+
          
 #- name: print the content
  # hosts: all
-  tasks:
-    - name: Ansible Dictionaries Usage Example
-      debug:
-        msg: " A list of student details: {{ list_items }}"
+  #tasks:
+   # - name: Ansible Dictionaries Usage Example
+    #  debug:
+     #   msg: " A list of student details: {{ list_items }}"
