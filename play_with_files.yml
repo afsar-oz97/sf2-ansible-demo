@@ -1,8 +1,9 @@
 - include_vars:
      file: configuration.yml
-     
-     
-- tasks:
+- name: install
+  hosts: sengame-vpu-0101 ,seneyed-vpu-0101 #local-host-system
+  become: true    
+  tasks:
   - name: print
     debug:
       msg: "{{ list_items }}"
