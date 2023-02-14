@@ -4,8 +4,8 @@
 - name: include variables
   hosts: local-host-system
   tasks:
-    - include_vars: /home/sensen/configuration.yaml
-  delegate_to: local-host-system
+    include_vars: /home/sensen/configuration.yaml
+    delegate_to: local-host-system
     
     #file: configuration.yml 
     
@@ -13,6 +13,6 @@
   hosts: sengame-vpu-0101 ,seneyed-vpu-0101 #local-host-system
   become: true    
   tasks:
-  - name: print
-    debug:
-      msg: "{{ list_items }}"
+    - name: print
+      debug:
+        msg: "{{ list_items }}"
