@@ -17,9 +17,10 @@
    # include_vars: configuration.yml
   tasks:
     - name: Ansible Dictionaries Usage Example
-      debug:
-        msg: " A list of student details: {{ item }}"
-      with_items: "{{ list_items.keys() }}"
+      apt:
+        name: {{item}}
+        update_cache: yes
+      with_items: "{{ list_items["{{inventory_hostname}}}"]["apt"] }}"
       
 
   
