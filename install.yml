@@ -1,5 +1,5 @@
 - name: install
-  hosts: sengame-vpu-0101 #,seneyed-vpu-0101 #local-host-system
+  hosts: sengame-vpu-0101 ,seneyed-vpu-0101 #local-host-system
   become: true
   tasks:   
     - name: sudo apt update and install app to the hosts
