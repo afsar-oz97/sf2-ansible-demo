@@ -2,9 +2,7 @@
      file: configuration.yml
      
      
-     
-
-tasks
+- tasks:
   - name: print
     debug:
       msg: "{{ list_items }}"
