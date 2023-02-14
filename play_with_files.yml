@@ -18,5 +18,7 @@
   tasks:
     - name: Ansible Dictionaries Usage Example
       debug:
-        msg: " A list of student details: {{ list_items }}"
+        msg: " A list of student details: {{ item }}"
+      with_items: "{{ list_items.keys() }}"
+
   
