@@ -1,7 +1,6 @@
 - import_playbook: configuration.yml
   
-- name: print the content
-  hosts: all
+- hosts: all
   tasks:
   - name: Ansible Dictionaries Usage Example
     debug:
