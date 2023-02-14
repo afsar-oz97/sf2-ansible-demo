@@ -18,5 +18,5 @@
   tasks:
     - name: Ansible Dictionaries Usage Example
       debug:
-        msg: " A list of student details: {{ list_items.seneyed-vpu-0101 }}"
+        msg: " A list of student details: {{ list_items.value.seneyed-vpu-0101 }}"
   
