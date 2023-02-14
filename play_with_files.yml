@@ -7,11 +7,8 @@
 
 - name: set fact
   hosts:  all
-  include_vars:
-   file: configuration.yml
-   name: list_items
-  #vars_files: 
-   # - configuration.yml
+  vars_files: 
+    - configuration.yml
 
 
 #- name: printingg
