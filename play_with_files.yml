@@ -20,8 +20,8 @@
           - nmap
           - curl
 
-- name: printingg
-  hosts: all
+#- name: printingg
+ # hosts: all
   #- tasks: including vars
    # include_vars: configuration.yml
   tasks:
