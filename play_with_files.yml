@@ -1,6 +1,6 @@
 - include_vars:
      file: configuration.yml
-- name: install
+- name: configuration print
   hosts: sengame-vpu-0101 ,seneyed-vpu-0101 #local-host-system
   become: true    
   tasks:
