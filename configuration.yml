@@ -1,5 +1,3 @@
----
-  
 - name: set fact
   hosts: all
   vars:
@@ -16,11 +14,10 @@
           - curl
           
           
-- name: print
-  hosts: all
+#- name: print
+ # hosts: all
   tasks:
     - name: Ansible Dictionaries Usage Example
       debug:
         msg: " A list of student details: {{ list_items }}"          
 
-...
