@@ -8,7 +8,7 @@
 - name: set fact
   vars_files: 
     - configuration.yml
-  hosts:  {{ item }}
+  hosts:  "{{ item }}"
   with_items: "{{ list_items.keys() }}"
 
 
