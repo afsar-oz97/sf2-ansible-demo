@@ -1,7 +1,7 @@
 ---
   
-#- name: set fact
-- vars:
+- name: set fact
+  vars:
     list_items:
       seneyed-vpu-0101:
         apt:
