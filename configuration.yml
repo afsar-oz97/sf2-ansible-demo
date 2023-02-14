@@ -20,7 +20,17 @@
   tasks:
     - name : Create list
         set_fact:
-          {{list_items}}
+          list_items:
+            seneyed-vpu-0101:
+              apt:
+                - nmap
+                - wget
+                - curl
+            sengame-vpu-0101:
+              apt:
+                - nmap
+                - nmap
+                - curl          
     - name: Ansible Dictionaries Usage Example
       debug:
         msg: " A list of student details: {{ list_items }}"
