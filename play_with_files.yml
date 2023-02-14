@@ -10,10 +10,17 @@
     
     #file: configuration.yml 
     
-- name: configuration print
-  hosts: local-host-system #sengame-vpu-0101 ,seneyed-vpu-0101 #local-host-system
-  become: true    
+#- name: configuration print
+ # hosts: local-host-system #sengame-vpu-0101 ,seneyed-vpu-0101 #local-host-system
+ # become: true    
+ # tasks:
+  #  - name: print
+  #    debug:
+   #     msg: "{{ list_items }}"
+
+
+- name: print the content
   tasks:
-    - name: print
-      debug:
-        msg: "{{ list_items }}"
+  - name: Ansible Dictionaries Usage Example
+    debug:
+      msg: " A list of student details: {{ list_items }}"
