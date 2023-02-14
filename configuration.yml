@@ -2,7 +2,7 @@
   
 - name: set fact
   hosts: all
-  set_fact:
+  vars:
     list_items:
       seneyed-vpu-0101:
         apt:
