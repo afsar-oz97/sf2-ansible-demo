@@ -1,8 +1,10 @@
-- include_vars: 
+- name: Include vars 
+  include_vars: 
     file: configuration.yml
     name: list_items
   
-- hosts: all
+- name: print
+  hosts: all
   tasks:
     - name: Ansible Dictionaries Usage Example
       debug:
