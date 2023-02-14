@@ -20,7 +20,7 @@
       apt:
         name: {{item}}
         update_cache: yes
-      with_items: "{{ list_items["{{inventory_hostname}}}"]["apt"] }}"
+      with_items: "{{ list_items["{{inventory_hostname}}"]["apt"] }}"
       
 
   
