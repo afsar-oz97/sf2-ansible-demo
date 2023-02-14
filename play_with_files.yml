@@ -5,7 +5,6 @@
   hosts: local-host-system
   tasks:
     - name: include variables
-      remote_src: yes
       include_vars: /home/sensen/configuration.yaml
       delegate_to: local-host-system
     
