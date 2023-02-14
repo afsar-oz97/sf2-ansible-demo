@@ -1,5 +1,6 @@
 
 - name: create variables
+  hosts: localhost
   vars:
     list_items:
       - seneyed-vpu-0101
