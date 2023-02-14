@@ -7,24 +7,12 @@
         name: nmap
         #state: present (default)
         update_cache: yes
-
       register: install
-      #run_once: true
-
-
-
-
-   # - name: Display the previous task's the stats/logs
-    #  debug:
-     #   msg:  "{{install.stdout_lines|last}}"
-        
-
+      
     - name: Gather Package facts
       package_facts:
         manager: auto
-    
-    
-    
+ 
     - name: Validating if the package is installed or not
       debug: 
         msg: "{{item}} is installed"
