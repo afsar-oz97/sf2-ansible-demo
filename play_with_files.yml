@@ -1,4 +1,4 @@
-- name: Include vars 
+- name: Including vars
   include_vars: 
     file: configuration.yml
     name: list_items
