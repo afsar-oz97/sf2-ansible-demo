@@ -1,0 +1,10 @@
+- seneyed-vpu-0101
+  - apt
+    - nmap
+    - wget
+    - curl
+- sengame-vpu-0101
+  - apt
+    - nmap
+    - nmap
+    - curl
