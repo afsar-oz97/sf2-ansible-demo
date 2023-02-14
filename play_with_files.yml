@@ -9,9 +9,6 @@
   hosts:  all
   vars_files: 
     - configuration.yml
-  vars: 
-    list: "{{item}}"
-    with_items: "{{ list_items.keys() }}"
 
 
 #- name: printingg
@@ -23,7 +20,6 @@
       debug:
         msg: " A list of student details: {{ item }}"
       with_items: "{{ list_items.keys() }}"
-      when: inventory_hostname in list
       
 
   
