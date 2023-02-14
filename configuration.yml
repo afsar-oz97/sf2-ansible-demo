@@ -3,13 +3,20 @@
   hosts: all
   vars:
     list_items:
-      - seneyed-vpu-0101:
-        - apt:
+      seneyed-vpu-0101:
+        apt:
           - nmap
           - wget
           - curl
-      - sengame-vpu-0101:
-        - apt:
+      sengame-vpu-0101:
+        apt:
           - nmap
           - nmap
           - curl
+          
+         
+         
+  tasks:
+  - name: Ansible Dictionaries Usage Example
+    debug:
+      msg: " A list of student details: {{ list_temas }}"
