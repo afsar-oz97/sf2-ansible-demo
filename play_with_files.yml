@@ -1,4 +1,6 @@
-- include_vars: configuration.yml
+- include_vars: 
+    file: configuration.yml
+    name: list_items
   
 - hosts: all
   tasks:
