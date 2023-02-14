@@ -1,5 +1,10 @@
-- include_vars:
-    file: configuration.yml
+#- include_vars:
+    #file: configuration.yml
+    
+- name: include variables
+  include_vars:
+    file: configuration.yml 
+    
 - name: configuration print
   hosts: sengame-vpu-0101 ,seneyed-vpu-0101 #local-host-system
   become: true    
