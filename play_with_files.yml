@@ -24,7 +24,7 @@
   hosts: all
   #- tasks: including vars
    # include_vars: configuration.yml
-  - tasks:
+  tasks:
     - name: Ansible Dictionaries Usage Example
       debug:
         msg: " A list of student details: {{ list_items }}"
