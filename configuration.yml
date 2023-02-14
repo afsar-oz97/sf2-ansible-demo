@@ -1,16 +1,17 @@
 ---
   
-- set_fact:
-    list_items:
-      seneyed-vpu-0101:
-        apt:
-          - nmap
-          - wget
-          - curl
-      sengame-vpu-0101:
-        apt:
-          - nmap
-          - nmap
-          - curl
+- name: set fact
+    set_fact:
+      list_items:
+        seneyed-vpu-0101:
+          apt:
+            - nmap
+            - wget
+            - curl
+        sengame-vpu-0101:
+          apt:
+            - nmap
+            - nmap
+            - curl
 
 ...
