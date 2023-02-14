@@ -1,6 +1,6 @@
 
 - name: create variables
-  #hosts: all
+  hosts: all
   vars:
     list_items:
       seneyed-vpu-0101:
