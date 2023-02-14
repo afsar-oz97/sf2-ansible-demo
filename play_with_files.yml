@@ -7,18 +7,10 @@
 
 - name: set fact
   hosts: all
-  vars:
-    list_items:
-      seneyed-vpu-0101:
-        apt:
-          - nmap
-          - wget
-          - curl
-      sengame-vpu-0101:
-        apt:
-          - nmap
-          - nmap
-          - curl
+  include_vars: 
+    file: configuration.yml
+    name: a
+
 
 #- name: printingg
  # hosts: all
@@ -27,4 +19,4 @@
   tasks:
     - name: Ansible Dictionaries Usage Example
       debug:
-        msg: " A list of student details: {{ list_items }}"
+        msg: " A list of student details: {{ a }}"
