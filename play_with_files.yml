@@ -1,7 +1,9 @@
-- name: Including vars
-  include_vars: 
-     file: configuration.yml
-     name: list_items
+- import_playbook: configuration.yml
+
+#- name: Including vars
+ # include_vars: 
+  #   file: configuration.yml
+   #  name: list_items
   
 - name: print
   hosts: all
