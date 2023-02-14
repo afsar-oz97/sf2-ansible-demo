@@ -11,7 +11,7 @@
     #file: configuration.yml 
     
 - name: configuration print
-  hosts: sengame-vpu-0101 ,seneyed-vpu-0101 #local-host-system
+  hosts: local-host-system #sengame-vpu-0101 ,seneyed-vpu-0101 #local-host-system
   become: true    
   tasks:
     - name: print
