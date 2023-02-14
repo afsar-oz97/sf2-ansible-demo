@@ -4,7 +4,7 @@
 - name: include variables
   hosts: local-host-system
   tasks:
-    - include_vars: /home/sensen/configuration.yaml
+    - include_vars: configuration.yaml
     
     #file: configuration.yml 
     
