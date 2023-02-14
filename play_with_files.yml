@@ -7,9 +7,8 @@
 
 - name: set fact
   hosts: all
-  include_vars: 
-    file: configuration.yml
-    name: a
+  vars_files: 
+    - configuration.yml
 
 
 #- name: printingg
@@ -19,4 +18,4 @@
   tasks:
     - name: Ansible Dictionaries Usage Example
       debug:
-        msg: " A list of student details: {{ a }}"
+        msg: " A list of student details: {{ list_items }}"
