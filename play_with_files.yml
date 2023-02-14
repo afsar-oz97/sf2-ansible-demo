@@ -9,6 +9,9 @@
   hosts:  all
   vars_files: 
     - configuration.yml
+  vars: 
+    list: "{{item}}"
+    with_items: "{{ list_items.keys() }}"
 
 
 #- name: printingg
