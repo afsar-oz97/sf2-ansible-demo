@@ -6,7 +6,7 @@
    #  name: list_items
 
 - name: set fact
-  hosts:  hosts: "{{ custom_hosts | default('all') }}"
+  hosts:  all
   vars_files: 
     - configuration.yml
 
