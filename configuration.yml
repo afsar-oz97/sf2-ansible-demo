@@ -1,6 +1,6 @@
 
 - name: create variables
-  hosts: all
+  #hosts: all
   vars:
     list_items:
       seneyed-vpu-0101:
@@ -16,7 +16,7 @@
           
          
          
-#  tasks:
- # - name: Ansible Dictionaries Usage Example
-  #  debug:
-   #   msg: " A list of student details: {{ list_items }}"
+  tasks:
+  - name: Ansible Dictionaries Usage Example
+    debug:
+      msg: " A list of student details: {{ list_items }}"
