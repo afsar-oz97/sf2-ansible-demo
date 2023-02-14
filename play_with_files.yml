@@ -3,7 +3,8 @@
     
 - name: include variables
   hosts: "*"
-  include_vars: configuration.yaml
+  tasks:
+    - include_vars: configuration.yaml
     
     #file: configuration.yml 
     
