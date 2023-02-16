@@ -17,6 +17,7 @@
       register: result
       with_items: "{{ list_items[inventory_hostname]['apt']}}"
       #until: result.results.
+       #### Should I ignore error?
     
     - name: Check for failure and restore
       command: sudo sh restore.sh
