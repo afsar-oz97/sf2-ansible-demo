@@ -25,5 +25,5 @@
     
     - name: check for failure
       debug: 
-        msg: "Is this a failure: {{result.failed}}"
+        msg: "Is this a failure: {{result}}"
       
