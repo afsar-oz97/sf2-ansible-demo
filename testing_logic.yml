@@ -4,10 +4,6 @@
     - configuration.yml
 
   tasks:
-  
- #   - name: Take snapshot first
-  #    command: sudo sh take_snashop.sh
-        
     - name: Sequence 1
       debug:
         var: "{{item}}"
