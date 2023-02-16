@@ -10,13 +10,3 @@
       register: result
       failed_when: item == 3
       with_sequence: start=0 end=5
-      #ignore_errors: true
-      
-      
-  # - name: Sequence 2
-   #   debug:
-    #    msg: "{{item}}"
-     # register: result
-      #failed_when: item == 14
-      #with_sequence: start=10 end=114
-      #ignore_errors: true
