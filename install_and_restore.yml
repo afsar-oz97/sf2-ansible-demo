@@ -27,4 +27,4 @@
     - name: check for failure and restore
       #command: 
       debug: 
-        var: result.0.failed
+        var: result
