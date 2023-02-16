@@ -16,6 +16,9 @@
         update_cache: yes
       register: result
       with_items: "{{ list_items[inventory_hostname]['apt']}}"
+      #failed_when: one of them is failure
+      #ignore_errors: true
+      
       #until: result.results.
        #### Should I ignore error?
     
