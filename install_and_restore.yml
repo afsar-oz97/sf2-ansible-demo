@@ -21,4 +21,4 @@
     - name: Check for failure and restore
       command: sudo sh restore.sh
       with_items: "{{result.results}}"
-      when: item.failed == True
+      when: item.failed == False
