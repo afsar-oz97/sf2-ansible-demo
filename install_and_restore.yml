@@ -22,3 +22,5 @@
       command: sudo sh restore.sh
       with_items: "{{result.results}}"
       when: item.failed == False
+      ignore_unreachable: true
+
