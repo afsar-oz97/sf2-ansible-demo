@@ -20,5 +20,6 @@
     - name: check for failure and restore
       #command: 
       debug: 
-        msg: "Is the result for {{item}} failure? : {{item.failed}} "
+        var: "{{item}}"
+        #msg: "Is the result for {{item}} failure? : {{item.failed}} "
       with_items: "{{result.results}}"
