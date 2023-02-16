@@ -21,5 +21,5 @@
       #command: 
       debug: 
         var: "{{item}}"
-        msg: "Is the result for {{item}} failure? : {{item.failed}} "
+        #msg: "Is the result for {{item}} failure? : {{item.failed}} "
       with_items: "{{result.results}}"
