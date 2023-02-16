@@ -25,7 +25,7 @@
       #when: result.failed != "True"
     
     - name: check for failure and restore
-      command: 
+      #command: 
       debug: 
         msg: "Is this a failure: {{result}}"
       
