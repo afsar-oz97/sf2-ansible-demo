@@ -9,7 +9,6 @@
   
     - name: Take snapshot first
       command: sudo sh take_snashop.sh
-        name: "{{item}}"
         
     - name: Ansible Dictionaries Usage Example
       apt:
