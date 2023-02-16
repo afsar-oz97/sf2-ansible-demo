@@ -27,5 +27,4 @@
     - name: check for failure and restore
       #command: 
       debug: 
-        var: result['npm']['failed']
-      
+        var: result.0.failed
