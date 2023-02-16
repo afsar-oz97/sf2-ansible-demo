@@ -10,7 +10,7 @@
  #   - name: Take snapshot first
   #    command: sudo sh take_snashop.sh
         
-    - name: Ansible Dictionaries Usage Example
+    - name: Attempt to install apt packages
       apt:
         name: "{{item}}"
         update_cache: yes
@@ -18,7 +18,7 @@
       with_items: "{{ list_items[inventory_hostname]['apt']}}"
       #until: result.results.
     
-    - name: check for failure and restore
+    - name: Check for failure and restore
       command: sudo sh restore.sh
       with_items: "{{result.results}}"
       when: item.failed == True
