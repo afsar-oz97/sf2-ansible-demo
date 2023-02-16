@@ -27,5 +27,5 @@
     - name: check for failure and restore
       #command: 
       debug: 
-        var: result.changed.results
-      #with_items: "{{result.changed.results}}"
+        msg: "Is the result for {{item}} failure? : {{item.failed}} "
+      with_items: "{{result.results}}"
