@@ -9,4 +9,4 @@
         msg: "{{item}}"
       register: result
       with_sequence: start=0 end=5
-      failed_when: result.item == 3
+      failed_when: item == 3
