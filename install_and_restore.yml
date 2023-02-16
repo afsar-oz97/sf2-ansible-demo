@@ -23,4 +23,4 @@
        # var: "{{item}}"
         msg: "Is the result for {{item.item}} failure? : {{item.failed}} "
       with_items: "{{result.results}}"
-      until: not item.failed
+      until: item.failed
