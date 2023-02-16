@@ -21,6 +21,6 @@
     - name: Check for failure and restore
       command: sudo sh restore.sh
       with_items: "{{result.results}}"
-      when: item.failed == False
+      when: item.failed == True
       ignore_unreachable: true
 
