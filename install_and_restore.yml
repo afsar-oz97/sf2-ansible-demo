@@ -7,20 +7,20 @@
 
   tasks:
   
-  ### Take a snap shot first
-  
+    - name: Take snapshot first
+      command: sudo sh take_snashop.sh
+        name: "{{item}}"
+        
     - name: Ansible Dictionaries Usage Example
       apt:
         name: "{{item}}"
         update_cache: yes
+        register: a
       register: result
       with_items: "{{ list_items[inventory_hostname]['apt']}}"
       #until: result.results.
     
     - name: check for failure and restore
-      #command: 
-      debug: 
-       # var: "{{item}}"
-        msg: "Is the result for {{item.item}} failure? : {{item.failed}} "
+      command: sudo sh restore.sh
       with_items: "{{result.results}}"
-      until: item.failed == True
+      when: item.failed == True
