@@ -16,7 +16,7 @@ list_items:
       - curl
   local-host-docker:
     apt:
-      - nmap
+      - nmapgg
       - wget
       - curl
 
