@@ -27,6 +27,7 @@
     - name: check for failure and restore
       #command: 
       debug: 
-        msg: "Is this a failure: {{result}}" 
-      when: result['failed'] == False
+        msg: "Is this a failure: {{item.failed}}" 
+      with_items: "{{result}}""
+      #when: result['failed'] == False
       
