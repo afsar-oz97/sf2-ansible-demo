@@ -27,5 +27,6 @@
     - name: check for failure and restore
       #command: 
       debug: 
-        msg: "Is this a failure: {{result}}"
+        msg: "Is this a failure: {{result}}" 
+      when: result['failed'] == False
       
