@@ -14,7 +14,7 @@
       apt:
         name: "{{item}}"
         update_cache: yes
-        register: a
+      register: result
       with_items: "{{ list_items[inventory_hostname]['apt']}}"
       #until: result.results.
     
