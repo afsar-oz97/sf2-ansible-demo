@@ -8,5 +8,5 @@
       debug:
         msg: "{{item}}"
       register: result
-      failed_when: item == 3
       with_sequence: start=0 end=5
+      failed_when: "{{item}}" == 3
