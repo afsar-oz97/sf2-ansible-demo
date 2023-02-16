@@ -1,21 +1,14 @@
-#- import_playbook: configuration.yml
 
-#- name: Including vars
- # include_vars: 
-  #   file: configuration.yml
-   #  name: list_items
 
 - name: set fact
   hosts:  all
   vars_files: 
     - configuration.yml
 
-
-#- name: printingg
- # hosts: all
-  #- tasks: including vars
-   # include_vars: configuration.yml
   tasks:
+  
+  ### Take a snap shot first
+  
     - name: Ansible Dictionaries Usage Example
       apt:
         name: "{{item}}"
