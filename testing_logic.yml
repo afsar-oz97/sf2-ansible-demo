@@ -1,0 +1,26 @@
+- name: set fact
+  hosts:  all
+  vars_files: 
+    - configuration.yml
+
+  tasks:
+  
+ #   - name: Take snapshot first
+  #    command: sudo sh take_snashop.sh
+        
+    - name: Sequence 1
+      debug:
+        var: "{{item}}"
+      register: result
+      failed_when: item == 3
+      with_sequence: start=0 end=5
+      #ignore_errors: true
+      
+      
+   - name: Sequence 2
+      debug:
+        var: "{{item}}"
+      register: result
+      failed_when: item == 14
+      with_sequence: start=10 end=114
+      ignore_errors: true
