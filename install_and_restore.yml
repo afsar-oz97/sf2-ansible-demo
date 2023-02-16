@@ -21,6 +21,9 @@
       
       #until: result.results.
        #### Should I ignore error?
+       
+       
+       #If upgrade failed..create failure
     
     - name: Check for failure and restore
       command: sudo sh restore.sh
