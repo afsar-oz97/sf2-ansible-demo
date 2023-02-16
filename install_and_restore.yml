@@ -22,7 +22,7 @@
         update_cache: yes
       register: result
       with_items: "{{ list_items[inventory_hostname]['apt']}}"
-      when: result.failed != "True"
+      #when: result.failed != "True"
     
     - name: check for failure
       debug: 
