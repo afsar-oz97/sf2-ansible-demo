@@ -7,8 +7,8 @@
 
   tasks:
   
-    - name: Take snapshot first
-      command: sudo sh take_snashop.sh
+ #   - name: Take snapshot first
+  #    command: sudo sh take_snashop.sh
         
     - name: Ansible Dictionaries Usage Example
       apt:
