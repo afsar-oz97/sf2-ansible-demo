@@ -6,7 +6,7 @@
   tasks:
     - name: Sequence 1
       debug:
-        var: "{{item}}"
+        msg: "{{item}}"
       register: result
       failed_when: item == 3
       with_sequence: start=0 end=5
@@ -15,7 +15,7 @@
       
    - name: Sequence 2
       debug:
-        var: "{{item}}"
+        msg: "{{item}}"
       register: result
       failed_when: item == 14
       with_sequence: start=10 end=114
