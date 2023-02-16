@@ -21,6 +21,7 @@
         name: "{{item}}"
         update_cache: yes
       register: result
-      
+      debug: 
+        msg: "Is this a failure: {{result.failed}}"
       with_items: "{{ list_items[inventory_hostname]['apt']}}"
       
