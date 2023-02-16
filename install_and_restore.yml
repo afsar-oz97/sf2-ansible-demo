@@ -24,7 +24,8 @@
       with_items: "{{ list_items[inventory_hostname]['apt']}}"
       #when: result.failed != "True"
     
-    - name: check for failure
+    - name: check for failure and restore
+      command: 
       debug: 
         msg: "Is this a failure: {{result}}"
       
