@@ -5,7 +5,9 @@
   hosts:  seneyed-vpu-0101
   tasks:
    - name: Launch syncing for seneyed-vpu-0101
-     command: sudo timeshift --create --comments "A new backup"
+     command: curl -X POST -k http://192.168.49.2:30080/api/v2/job_templates/9/launch/ \
+            --user "sengame_user:testsensen" -H "Content-Type: application/json" \
+            -d '{ "limit":"{{inventory_hostname}}"}'
      delegate_to: local-host-system   
 
      
@@ -15,9 +17,13 @@
   hosts:  sengame-vpu-0101
   tasks:
    - name: Launch syncing for sengame-vpu-0101 
-     command: sudo timeshift --create --comments "A new backup"
+     command: curl -X POST -k http://192.168.49.2:30080/api/v2/job_templates/9/launch/ \
+            --user "sengame_user:testsensen" -H "Content-Type: application/json" \
+            -d '{ "limit":"{{inventory_hostname}}"}'
      delegate_to: local-host-system   
      
      
      
   
+
+
