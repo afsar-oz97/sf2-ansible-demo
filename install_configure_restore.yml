@@ -33,6 +33,10 @@
      
   
   
+  
+  
+  
+  
 - name: Configure server sengame-vpu-0101
   hosts:  sengame-vpu-0101
   tasks:
@@ -45,7 +49,7 @@
            name: nmap
            update_cache: yes
        - name: Install wget
-        apt:
+         apt:
           name: wget
           update_cache: yes      
           
@@ -63,4 +67,35 @@
                 tail -n 1` --skip-grub --yes
      ignore_unreachable: true
      
-  
+ 
+ 
+ 
+- name: Configure server local-host-docker
+  hosts:  local-host-docker
+  tasks:
+   - name: Take snapshot first
+     command: sudo timeshift --create --comments "A new backup"
+   - name: Install softwares on local-host-docker
+     block:
+       - name: Install nmap
+         apt:
+           name: nmap
+           update_cache: yes
+       - name: Install wget
+         apt:
+          name: wget
+          update_cache: yes      
+          
+      # - name: Copy the file from laptop to sengame
+       #  synchronize:
+        #  src: /home/sensen/dfile.txt
+         # dest: /home/sensen/test/dfile.txt
+        # delegate_to: local-host-system       
+     
+     rescue: 
+       - name: Restore and reboot
+         command: echo -e '\n' | \
+                sudo timeshift --restore --scripted --snapshot \
+                `sudo timeshift --list | sed -n 's/.*>  \([0-9]*-[0-9]*-[0-9]*_[0-9]*-[0-9]*-[0-9]*\).*/\1/p' | \
+                tail -n 1` --skip-grub --yes
+     ignore_unreachable: true
