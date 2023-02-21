@@ -5,7 +5,7 @@
   hosts:  local-host-system-home
   tasks:
    - name: Launch syncing for seneyed-vpu-0101
-     command: curl -X POST -k http://192.168.49.2:30080/api/v2/job_templates/10/launch/ --user "sengame_user:testsensen" -H '"Content-Type: application/json"' -d '{ "limit":"local-host-system-home"}'
+     command: curl -X POST -k http://192.168.49.2:30080/api/v2/job_templates/10/launch/ --user "sengame_user:testsensen" -H "Content-Type:application/json" #-d '{"limit":"local-host-system-home"}'
      delegate_to: local-host-system-home  
 
      
