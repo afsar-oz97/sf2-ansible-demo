@@ -1,10 +1,10 @@
 
 
 
-- name: Launch configure for seneyed-vpu-0101
+- name: Launch configuration for seneyed-vpu-0101
   hosts:  seneyed-vpu-0101
   tasks:
-   - name: Take snapshot first
+   - name: Launch syncing for seneyed-vpu-0101
      command: sudo timeshift --create --comments "A new backup"
      delegate_to: local-host-system   
 
@@ -14,7 +14,7 @@
 - name: Launch configuration for sengame-vpu-0101
   hosts:  sengame-vpu-0101
   tasks:
-   - name: Take snapshot first
+   - name: Launch syncing for sengame-vpu-0101 
      command: sudo timeshift --create --comments "A new backup"
      delegate_to: local-host-system   
      
