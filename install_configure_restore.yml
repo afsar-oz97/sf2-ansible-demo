@@ -1,0 +1,27 @@
+- name: set fact
+  hosts:  seneyed-vpu-0101
+  tasks:
+   - name: Take snapshot first
+     command: sudo timeshift --create --comments "A new backup"
+   - name: Install and configure seneyed-vpu-0101
+     block:
+       - name: Install httpd and memcached
+         apt:
+           name: nmap
+           update_cache: yes
+      - name: Install httpd and memcached
+        apt:
+          name: wget
+          update_cache: yes         
+           
+     rescue: 
+       - name: Restore and reboot
+         command: echo -e '\n' | \
+                sudo timeshift --restore --scripted --snapshot \
+                `sudo timeshift --list | sed -n 's/.*>  \([0-9]*-[0-9]*-[0-9]*_[0-9]*-[0-9]*-[0-9]*\).*/\1/p' | \
+                tail -n 1` --skip-grub --yes
+     ignore_unreachable: true
+     
+  
+  
+
